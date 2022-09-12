@@ -1,6 +1,6 @@
 {
 	"name": "demo-app-1",
-	"version": "1.0.2",
+	"version": "1.0.1",
 	"private": true,
 	"type": "commonjs",
 	"packageManager": "yarn@3.1.1",

@@ -14,7 +14,7 @@
 		}
 
 		#app {
-			@apply min-h-full w-full /* h-px */ h-auto;
+			@apply min-h-full w-full h-auto;
 
 			@screen sm {
 				@apply px-sm pb-16;
@@ -111,6 +111,7 @@
 			@apply inline-block w-auto h-[1em];
 		}
 
+		// In this reproduction project, the following styles only work when moved outside of "@layer base {}":
 		main.alex-app {
 			@apply mt-md p-md relative h-auto mx-auto flex flex-col items-center justify-center;
 			@apply bg-grey-dark rounded shadow-large;

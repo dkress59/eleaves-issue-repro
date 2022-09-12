@@ -16,10 +16,10 @@ function Dashboard() {
 			</h1>
 			<article>
 				<Link to="app-1" className="app-card">
-					Demo App 1
+					<h3>Demo App 1</h3>
 				</Link>
 				<Link to="app-2" className="app-card">
-					Demo App 2
+					<h3>Demo App 2</h3>
 				</Link>
 			</article>
 		</main>

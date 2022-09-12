@@ -10,7 +10,6 @@ export function DemoApp1() {
 	return (
 		<main id="demo-app-1" className="alex-app" data-testid="demo-app-1">
 			<h1>Demo App One</h1>
-			<span className="num">1/2</span>
 			<article>
 				<span className="blobs-1" />
 				<span className="blobs-2" />
