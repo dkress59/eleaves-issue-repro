@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import './util.scss';
-@import './base.scss';
-@import '../icons.scss';
+@import "./tailwind.scss";
+@import "./util.scss";
+@import "./base.scss";
+@import "../icons.scss";

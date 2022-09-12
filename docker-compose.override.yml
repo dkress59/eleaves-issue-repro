@@ -14,17 +14,6 @@ services:
       - ./.yarn:/eleaves/.yarn
       - ./package.json:/eleaves/package.json
       - ./yarn.lock:/eleaves/yarn.lock
-  
-  eleaves-storybook:
-    build:
-      context: .
-      target: dev-storybook
-    volumes:
-      - ./.storybook:/eleaves/.storybook
-      - ./apps:/eleaves/apps
-      - ./stories:/eleaves/stories
-    #deploy:
-    #  replicas: 0 # comment-out to use this service
 
 
 volumes:

@@ -10,12 +10,13 @@ The original project uses:
 * Docker Compose for local development and deployment
 * Webpack as the bundler
 * TailwindCSS via postcss(-loader) as the design framework
-* Storybook for local development
 * Yarn workspaces to be able to bundle apps separately, so they can be deployed (to Webflow and WordPress) as standalone apps
 * NodeJS 18 for native `fetch` and native `FormData`
+* Storybook for local development (not included)
 * NestJS as the back-end (not included)
 * Directus as the CMS (not included)
 * EJS for email templating (not included)
+* Jest for unit tests + e2e tests (not included)
 
 ### Development
 

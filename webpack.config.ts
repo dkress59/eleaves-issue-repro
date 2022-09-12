@@ -110,7 +110,7 @@ export function getWebpackConfig(
 								: 'style-loader',
 							'css-loader',
 							'postcss-loader',
-							'sass-loader', // fixes tailwind utility bug
+							'sass-loader', // fixes tailwind/postcss imports
 						],
 						exclude: /node_modules/,
 					},
