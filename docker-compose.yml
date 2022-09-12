@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  
+  eleaves-app:
+    container_name: eleaves-repro-app
+    restart: always
+    build:
+      context: .
+      target: app
+    ports:
+      - 3000:3000
+    environment:
+      BE_URL: ${BE_URL}
+      CMS_URL: ${CMS_URL}
+  
+  eleaves-storybook:
+    container_name: eleaves-repro-storybook
+    build:
+      context: .
+      target: storybook
+    ports:
+      - 6006:6006
+
+
+networks:
+  directus:
+
+volumes:
+  db:
+  cache:

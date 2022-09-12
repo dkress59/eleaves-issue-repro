@@ -1,0 +1,56 @@
+.radio {
+	&-group {
+		@apply block;
+
+		&:not(.horizontal) {
+			@apply space-y-xs;
+		}
+
+		&.horizontal {
+			@apply flex flex-wrap -mb-xs;
+
+			.check-box {
+				@apply mr-sm mb-xs;
+			}
+		}
+
+		&:not(:last-child) {
+			@apply mb-xs;
+		}
+	}
+
+	&.check-box {
+		@apply flex justify-start items-start;
+
+		.indicator {
+			@apply bg-transparent relative;
+
+			&::after {
+				@apply absolute w-[6px] h-[6px] top-[2px] left-[2px];
+				@apply bg-transparent rounded-full;
+				@apply alex-transition;
+
+				content: ' ';
+			}
+
+			&.active {
+				@apply border-green-mint;
+
+				&::after {
+					@apply bg-green-mint rounded-full;
+				}
+			}
+		}
+
+		&:hover,
+		&:active &:focus {
+			.indicator:not(.active) {
+				@apply border-grey-dark;
+
+				&::after {
+					@apply bg-grey-dark rounded-full;
+				}
+			}
+		}
+	}
+}

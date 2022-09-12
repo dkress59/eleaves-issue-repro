@@ -1,0 +1,29 @@
+canvas.signature {
+	@apply h-32;
+}
+
+.signature-wrapper {
+	@apply relative mt-sm w-full;
+	@apply text-grey-dark;
+
+	.chapter & {
+		@apply text-current;
+	}
+
+	.placeholder {
+		@apply opacity-50 absolute top-sm left-sm pointer-events-none;
+	}
+
+	.button-clear {
+		@apply block p-xs m-xs cursor-pointer absolute top-0 right-0;
+
+		svg {
+			@apply relative block w-[21px] h-[21px];
+
+			circle,
+			path {
+				@apply stroke-current stroke-2;
+			}
+		}
+	}
+}

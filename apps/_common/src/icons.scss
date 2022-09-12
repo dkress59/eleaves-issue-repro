@@ -1,0 +1,27 @@
+.icon-arrow {
+	@apply inline-block h-4 w-auto m-0;
+
+	&.to-left {
+		@apply /* transform rotate-180 */ mr-sm;
+
+		transform: rotate(180deg);
+	}
+
+	&:not(.to-left) {
+		@apply ml-sm;
+	}
+}
+
+.icon-clear {
+	circle {
+		@apply fill-grey-light stroke-2 stroke-grey-dark;
+
+		+ circle {
+			@apply stroke-0 stroke-transparent;
+		}
+	}
+
+	path {
+		@apply stroke-2 stroke-grey-dark;
+	}
+}

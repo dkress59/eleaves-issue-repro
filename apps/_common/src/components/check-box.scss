@@ -1,0 +1,57 @@
+.check-box {
+	@apply cursor-pointer;
+
+	.indicator {
+		@apply rounded-full;
+		@apply w-3.5 h-3.5 mt-1 mr-2 cursor-pointer flex-shrink-0;
+		@apply bg-grey-dark border-2 border-solid border-grey-dark;
+
+		&,
+		* {
+			@apply alex-transition;
+		}
+
+		&.active {
+			@apply bg-green-mint border-green-mint;
+
+			circle {
+				@apply fill-green-mint;
+			}
+
+			path {
+				@apply stroke-white;
+			}
+		}
+	}
+
+	&.disabled {
+		@apply opacity-50 pointer-events-none cursor-not-allowed;
+	}
+
+	&:hover,
+	&:active &:focus {
+		.indicator:not(.active) {
+			path {
+				@apply stroke-white;
+			}
+		}
+	}
+
+	/* stylelint-disable no-descending-specificity */
+	&[role="checkbox"] {
+		@apply flex;
+
+		.indicator {
+			@apply flex bg-none border-0;
+		}
+
+		circle {
+			@apply fill-grey-dark;
+		}
+
+		path {
+			@apply stroke-grey-dark;
+		}
+	}
+	/* stylelint-enable no-descending-specificity */
+}

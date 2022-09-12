@@ -1,0 +1,25 @@
+.chapter {
+	@apply p-sm rounded;
+	@apply bg-grey-light text-grey-dark;
+	@apply space-y-sm;
+
+	input {
+		@apply w-full;
+	}
+
+	&.red {
+		@apply bg-red-faint;
+	}
+
+	&.yellow {
+		@apply bg-yellow-sand;
+	}
+
+	&.green {
+		@apply bg-green-mint;
+	}
+
+	&.plain {
+		@apply bg-transparent p-0 mb-lg text-grey-light;
+	}
+}

@@ -1,0 +1,21 @@
+.time-input {
+	@apply alex-input;
+	@apply py-xs px-sm /* mb-sm */ cursor-text;
+
+	> span {
+		@apply opacity-50 pointer-events-none;
+	}
+
+	> input {
+		@apply bg-none border-none rounded-none outline-none;
+		@apply inline-block tabular-nums p-0 m-0 w-7;
+
+		+ input {
+			@apply ml-2;
+		}
+	}
+
+	&.disabled {
+		@apply opacity-50;
+	}
+}

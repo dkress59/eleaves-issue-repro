@@ -1,0 +1,88 @@
+main#dashboard-app {
+	@apply text-sm mt-md mx-auto;
+	@apply w-full xs:w-90 md:w-190 xl:w-290;
+
+	.welcome {
+		@apply relative bg-fluid-horizontal mb-lg;
+	}
+
+	h1 {
+		@apply w-full text-center mb-0;
+
+		.content {
+			@apply p-[28.4px];
+		}
+	}
+
+	h2 {
+		@apply text-4xl font-bold my-lg;
+	}
+
+	> .icon-loading {
+		@apply mx-auto;
+	}
+
+	article {
+		@apply w-full grid grid-cols-1 gap-md;
+
+		@screen md {
+			@apply grid-cols-2;
+		}
+
+		@screen xl {
+			@apply grid-cols-3;
+		}
+
+		section,
+		.app-card {
+			@apply min-h-50 px-md py-sm rounded shadow cursor-pointer;
+			@apply border-3 border-transparent alex-transition;
+
+			h3 {
+				@apply text-[21px] leading-[25px] tracking-wide font-bold m-0 mb-sm;
+			}
+		}
+
+		.app-card {
+			@apply no-underline hover:opacity-100 focus:opacity-100;
+			@apply flex flex-col transform-gpu;
+
+			h3 {
+				@apply flex-grow alex-transition;
+			}
+
+			.incentive {
+				@apply font-bold self-end alex-transition;
+			}
+
+			&:hover {
+				@apply shadow-off border-green-mint scale-95;
+
+				h3,
+				.incentive {
+					@apply text-green-mint;
+				}
+			}
+		}
+
+		&#info {
+			section {
+				@apply bg-white text-grey-dark cursor-default;
+
+				&,
+				h3 {
+					@apply font-bold text-xl leading-7;
+				}
+			}
+
+			.logo {
+				@apply relative overflow-hidden;
+
+				img {
+					@apply absolute w-full h-full inset-0;
+					@apply object-scale-down object-center;
+				}
+			}
+		}
+	}
+}

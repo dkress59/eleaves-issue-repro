@@ -1,0 +1,19 @@
+header.logo {
+	@apply w-full h-52;
+	@apply flex items-center justify-center;
+
+	a {
+		@apply p-xs text-2xl font-bold italic no-underline hover:opacity-100 focus:opacity-100;
+		@apply flex mx-auto w-160 items-center justify-center;
+	}
+
+	span {
+		flex: 1;
+
+		&:nth-of-type(2) {
+			@apply text-center;
+
+			flex: 4;
+		}
+	}
+}

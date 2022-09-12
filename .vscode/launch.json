@@ -1,0 +1,56 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"cwd": "${workspaceFolder}",
+			"name": "debug",
+			"port": 5858,
+			"runtimeExecutable": "yarn",
+			"request": "launch",
+			"runtimeArgs": ["jest", "--inspect-brk=5858", "--runInBand"],
+			"type": "node"
+		},
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"cwd": "${workspaceFolder}",
+			"name": "test",
+			"runtimeExecutable": "yarn",
+			"request": "launch",
+			"runtimeArgs": ["test"],
+			"type": "node"
+		},
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"cwd": "${workspaceFolder}",
+			"name": "test (coverage report)",
+			"runtimeExecutable": "yarn --verbose=false --coverage",
+			"request": "launch",
+			"runtimeArgs": ["test"],
+			"type": "node"
+		},
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"cwd": "${workspaceFolder}",
+			"name": "test apps",
+			"runtimeExecutable": "yarn",
+			"request": "launch",
+			"runtimeArgs": ["test:apps"],
+			"type": "node"
+		},
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"cwd": "${workspaceFolder}",
+			"name": "test server",
+			"runtimeExecutable": "yarn",
+			"request": "launch",
+			"runtimeArgs": ["test:server"],
+			"type": "node"
+		}
+	]
+}

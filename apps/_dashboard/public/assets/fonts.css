@@ -1,0 +1,77 @@
+@font-face {
+	font-family: Moderat;
+	font-weight: 100;
+	src: url('./Moderat-Thin.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 100;
+	src: url('./Moderat-Thin-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-weight: 300;
+	src: url('./Moderat-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 300;
+	src: url('./Moderat-Light-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-weight: 400;
+	src: url('./Moderat-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 400;
+	src: url('./Moderat-Regular-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-weight: 500;
+	src: url('./Moderat-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 500;
+	src: url('./Moderat-Medium-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-weight: 700;
+	src: url('./Moderat-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 700;
+	src: url('./Moderat-Bold-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-weight: 900;
+	src: url('./Moderat-Black.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Moderat;
+	font-style: italic;
+	font-weight: 900;
+	src: url('./Moderat-Black-Italic.otf') format('opentype');
+}

@@ -1,0 +1,10 @@
+'Build Apps':
+  stage: build
+  when: manual
+  allow_failure: true
+  script:
+    - yarn build:all
+  artifacts:
+    when: always
+    paths:
+      - build

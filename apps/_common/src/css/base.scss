@@ -1,0 +1,144 @@
+@layer base {
+	html {
+		// html-font-size (=1rem) set to 16px by "@tailwind base;"
+		@apply bg-grey-dark text-grey-light font-medium;
+
+		&,
+		body {
+			@apply min-h-screen /* w-screen */ h-px;
+
+			// w-screen minus scrollbar:
+			width: calc(100vw - 16px);
+
+			@apply mx-auto;
+		}
+
+		#app {
+			@apply min-h-full w-full /* h-px */ h-auto;
+
+			@screen sm {
+				@apply px-sm pb-16;
+			}
+		}
+
+		h1 {
+			@apply text-4xl font-bold leading-11 mb-lg;
+		}
+
+		h2,
+		h3,
+		h4 {
+			@apply font-bold text-base mb-sm;
+		}
+
+		canvas,
+		input,
+		textarea {
+			@apply alex-input font-sans;
+		}
+
+		canvas,
+		textarea {
+			@apply p-sm w-full;
+		}
+
+		input,
+		select {
+			@apply py-xs px-sm;
+		}
+
+		button {
+			@apply w-full py-xs px-sm mx-auto my-sm;
+			@apply rounded cursor-pointer border-2 border-solid border-grey-dark outline-none;
+			@apply alex-transition;
+		}
+
+		input,
+		textarea,
+		button {
+			@apply block max-w-full;
+
+			&,
+			&:active,
+			&:focus {
+				@apply outline-none;
+			}
+
+			&:disabled {
+				@apply opacity-50 cursor-not-allowed;
+			}
+		}
+
+		.input-grid {
+			@apply grid gap-sm grid-cols-2;
+		}
+
+		ol {
+			list-style-type: decimal;
+
+			> li {
+				@apply pl-xs;
+			}
+		}
+
+		ul,
+		ol {
+			> li {
+				@apply ml-sm;
+
+				+ li {
+					@apply mt-xs;
+				}
+			}
+		}
+
+		ul ol li,
+		ol ul li {
+			@apply mt-0;
+		}
+
+		a:link {
+			@apply underline underline-offset-2;
+
+			&:hover,
+			&:active,
+			&:focus {
+				@apply no-underline opacity-50;
+			}
+		}
+
+		svg {
+			@apply inline-block w-auto h-[1em];
+		}
+
+		main.alex-app {
+			@apply mt-md p-md relative h-auto mx-auto flex flex-col items-center justify-center;
+			@apply bg-grey-dark rounded shadow-large;
+
+			article {
+				@apply w-full;
+
+				h1 {
+					@apply italic;
+				}
+
+				h2 {
+					@apply text-xl font-medium italic;
+				}
+
+				h3 {
+					@apply text-lg font-medium leading-[1.35];
+				}
+
+				> .num {
+					@apply float-right;
+					@apply text-4xl font-bold italic leading-11;
+				}
+			}
+
+			section {
+				@apply my-sm;
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+aside.admonition {
+	@apply relative block p-sm rounded alex-transition;
+	@apply cursor-default bg-yellow-sand text-grey-dark text-left font-normal text-sm leading-[1.2];
+
+	h4 {
+		@apply mb-xs;
+	}
+
+	p,
+	ul,
+	ol {
+		&:not(:last-child) {
+			@apply mb-sm;
+		}
+	}
+
+	ol > li {
+		@apply pl-0;
+	}
+
+	ul > li {
+		@apply list-disc;
+	}
+
+	&.truncated {
+		@apply max-h-64 overflow-hidden cursor-pointer;
+
+		&::after {
+			content: " ";
+
+			@apply absolute block inset-0 top-auto h-16;
+			@apply pointer-events-none alex-transition;
+
+			background-image:
+				linear-gradient(
+					0deg,
+					rgb(255 251 212 / 100%) 0%,
+					rgb(255 251 212 / 0%) 100%
+				);
+		}
+
+		&.expanded {
+			@apply max-h-[1920px];
+
+			&::after {
+				background-image:
+					linear-gradient(
+						0deg,
+						rgb(255 251 212 / 0%) 0%,
+						rgb(255 251 212 / 0%) 100%
+					);
+			}
+		}
+	}
+}

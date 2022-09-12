@@ -1,0 +1,155 @@
+@layer utilities {
+	@keyframes shift-for-horizontal {
+		0% {
+			transform: translate(0%, 0%);
+		}
+
+		50% {
+			transform: translate(-15%, 25%) rotate(5deg);
+		}
+
+		100% {
+			transform: translate(0%, 0%);
+		}
+	}
+
+	@keyframes shift-and-tilt {
+		0% {
+			transform: translate(0%, 0%);
+		}
+
+		50% {
+			transform: translate(25%, 5%) rotate(-45deg);
+		}
+
+		100% {
+			transform: translate(0%, 0%);
+		}
+	}
+
+	.alex-input {
+		@apply bg-grey-light text-grey-dark;
+		@apply border-2 border-solid border-grey-dark rounded outline-none;
+		@apply placeholder-opacity-50;
+
+		&:disabled {
+			@apply opacity-50;
+		}
+	}
+
+	.alex-transition {
+		@apply transition-all duration-300;
+	}
+
+	.button-green {
+		@apply bg-green-mint border-2 border-green-mint text-grey-light;
+	}
+
+	.button-purple {
+		@apply bg-grey-dark text-purple border-2 border-purple;
+	}
+
+	.bg-fluid {
+		&,
+		&-horizontal {
+			@apply bg-yellow-sand rounded overflow-hidden;
+
+			// Safari fix for border-radius + overflow: hidden
+			mask-image: radial-gradient(white, black);
+
+			.content {
+				@apply relative z-10 backdrop-blur-2xl w-full h-full;
+				@apply flex items-center justify-center text-white;
+			}
+
+			.blobs-1 {
+				@apply block;
+
+				&::before {
+					@apply absolute z-0 w-full h-full rounded-full;
+					@apply -top-1/4 -left-1/4 bg-yellow-sand;
+
+					content: ' ';
+				}
+
+				&::after {
+					@apply absolute z-0 w-full h-full rounded-full;
+					@apply -top-1/4 -right-1/4 bg-green-mint;
+
+					content: ' ';
+				}
+			}
+
+			.blobs-2 {
+				@apply block;
+
+				&::before {
+					@apply absolute z-0 w-full h-full rounded-full;
+					@apply -bottom-1/3 -left-1/3 bg-purple;
+
+					content: ' ';
+				}
+
+				&::after {
+					@apply absolute z-0 w-full h-full rounded-full;
+					@apply -bottom-1/2 -right-1/2 bg-red;
+
+					content: ' ';
+				}
+			}
+		}
+
+		// stylelint-disable-next-line no-duplicate-selectors
+		& {
+			.blobs-1 {
+				&::before {
+					animation: shift-and-tilt 3s ease infinite;
+				}
+
+				&::after {
+					animation: shift-and-tilt 3s ease infinite 0.5s;
+				}
+			}
+
+			.blobs-2 {
+				&::before {
+					animation: shift-and-tilt 3s ease infinite 0.75s;
+				}
+
+				&::after {
+					animation: shift-and-tilt 3s ease infinite;
+				}
+			}
+		}
+
+		&-horizontal {
+			.blobs-1 {
+				&::before {
+					animation: shift-for-horizontal 5s ease infinite;
+				}
+
+				&::after {
+					animation: shift-for-horizontal 5s ease infinite 1s;
+				}
+			}
+
+			.blobs-2 {
+				&::before {
+					@apply z-10;
+
+					animation: shift-for-horizontal 5s ease infinite 1.75s;
+				}
+
+				&::after {
+					@apply -bottom-3/4;
+
+					animation: shift-for-horizontal 5s ease infinite 2.5s;
+				}
+			}
+		}
+	}
+
+	.hyphens-auto {
+		hyphens: auto;
+	}
+}

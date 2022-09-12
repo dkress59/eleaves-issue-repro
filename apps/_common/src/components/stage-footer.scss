@@ -1,0 +1,35 @@
+.stage-footer {
+	@apply mt-40;
+	@apply flex flex-wrap justify-between;
+
+	button {
+		@apply py-xs px-sm w-max min-w-65 m-0 mt-4;
+		@apply bg-black border-2 border-black text-white italic leading-none;
+		@apply flex flex-wrap items-center justify-between shadow-off;
+		@apply border-2 border-transparent;
+
+		&:not(:disabled) {
+			@apply hover:shadow hover:transform-gpu hover:scale-105;
+		}
+
+		&:only-of-type {
+			margin-left: calc(100% - 16.25rem);
+
+			&.valid {
+				@apply button-green;
+			}
+		}
+
+		&:not(:only-of-type) {
+			&:first-of-type {
+				@apply button-purple;
+
+				+ button {
+					&.valid {
+						@apply button-green;
+					}
+				}
+			}
+		}
+	}
+}

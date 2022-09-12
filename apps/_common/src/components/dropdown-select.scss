@@ -1,0 +1,26 @@
+select {
+	@apply alex-input w-full outline-none border-0;
+}
+
+.dropdown-select {
+	@apply relative w-full;
+
+	select {
+		@apply block appearance-none cursor-pointer;
+	}
+
+	.handle {
+		@apply block absolute z-10 top-1/2 right-sm transform -translate-y-1/2;
+		@apply w-md h-3.5 rounded bg-grey-light border-6 border-solid border-grey-dark;
+		@apply alex-transition pointer-events-none;
+	}
+
+	&.active,
+	&:active,
+	&:hover,
+	&:focus {
+		.handle {
+			@apply border-green-mint;
+		}
+	}
+}

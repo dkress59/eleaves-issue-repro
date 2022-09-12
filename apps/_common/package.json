@@ -1,0 +1,25 @@
+{
+	"name": "common",
+	"packageManager": "yarn@3.2.1",
+	"dependencies": {
+		"axios": "0.27.2",
+		"moment": "2.29.4",
+		"moment-timezone": "0.5.37",
+		"prop-types": "15.8.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-loading-icons": "1.1.0",
+		"react-router": "6.3.0",
+		"react-router-dom": "6.3.0",
+		"react-signature-canvas": "1.0.6"
+	},
+	"devDependencies": {
+		"@types/prop-types": "15.7.5",
+		"@types/react": "18.0.19",
+		"@types/react-dom": "18.0.6",
+		"@types/react-signature-canvas": "1.0.2"
+	},
+	"scripts": {
+		"build": "echo '`common` package has no build script'"
+	}
+}

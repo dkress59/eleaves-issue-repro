@@ -1,0 +1,25 @@
+# Yarn 3
+.yarn/*
+#!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Scripts
+migrate*.sh
+
+# Misc
+*.db
+*.env
+.DS_Store
+.jest/cache
+coverage-*/
+coverage/
+build/
+dist/
+uploads/
+postgres/
+node_modules/
+email.css
