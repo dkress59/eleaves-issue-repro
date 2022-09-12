@@ -6,7 +6,7 @@ end_of_line = lf
 indent_style = tab
 insert_final_newline = true
 
-[*.{css,sass, scss}]
+[*.{css,sass,scss}]
 tab_width = 2
 
 [*.{json,yaml,yml}]

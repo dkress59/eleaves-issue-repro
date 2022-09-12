@@ -21,22 +21,13 @@
 			":dashboard/*": ["./apps/_dashboard/src/*"],
 			":demo-app-1/*": ["./apps/demo-app-1/src/*"],
 			":demo-app-2/*": ["./apps/demo-app-2/src/*"]
-		},
-		"types": ["jest", "node"]
+		}
 	},
 	"include": [
 		".eslintrc.js",
-		".jest/setupEnv.ts",
-		".jest/setupTests.ts",
 		"apps/*/src",
-		"apps/*/test",
-		"server",
-		"stories",
-		"tests",
-		"__mocks__",
 		"webpack.*.config.js",
 		"tsconfig-paths.ts",
-		"**/jest.*config.ts",
 		"**/postcss.config.js",
 		"**/tailwind.config.js",
 		"**/webpack.config.ts"

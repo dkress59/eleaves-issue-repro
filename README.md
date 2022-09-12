@@ -2,15 +2,16 @@
 
 ## Setup
 
-This is the minimum reproduction repository for a way larger Yarn-PNP monorepo.
+This is the minimum reproduction repository for a more complex Yarn-PNP monorepo.
 
 The original project uses:
 
-* Yarn 3 as the dependency manager (plug-and-play)
+* Yarn 3 as the dependency manager
+  * Yarn PNP to enable [VS Code SDKs](.yarn/sdks/)
+  * Yarn workspaces to be able to bundle apps separately, so they can be deployed (to Webflow and WordPress) as standalone apps
 * Docker Compose for local development and deployment
 * Webpack as the bundler
 * TailwindCSS via postcss(-loader) as the design framework
-* Yarn workspaces to be able to bundle apps separately, so they can be deployed (to Webflow and WordPress) as standalone apps
 * NodeJS 18 for native `fetch` and native `FormData`
 * Storybook for local development (not included)
 * NestJS as the back-end (not included)
@@ -23,7 +24,7 @@ The original project uses:
 * Run `docker compose up` (preferred) or `yarn start:dashboard` to start the dashboard workspace, which acts as the entrypoint for all other apps (in this repo, boiled down to `demo-app-1` and `demo-app-2`)
 * Run `yarn start:demo1` or `yarn start:demo2` to run apps in standalone mode
 
-*Note: the `postcss-scss` dependency is only included because in one package (":server") the stylesheet must be pre-built before deployment without webpack, via `yarn postcss ./apps/_common/src/css/email.scss -o ./apps/_server/src/mail/email.css`*
+*Note: the `postcss-scss` and `postcss-cli` dependencies are only included because in one package (":server") the stylesheet must be pre-built before deployment without webpack, via `yarn postcss ./apps/_common/src/css/email.scss -o ./apps/_server/src/mail/email.css`*
 
 ## Issues
 
